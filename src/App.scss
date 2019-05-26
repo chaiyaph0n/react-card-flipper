@@ -66,7 +66,7 @@
       @include card-flip-animation(rotateX(180deg));
     }
     
-    &.flip-bottom {
+    &.flip-down {
       @include card-flip-animation(rotateX(-180deg));
     }
   }

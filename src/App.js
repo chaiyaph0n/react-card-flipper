@@ -33,7 +33,7 @@ function App() {
       <CardFlipper direction={'left'} isFlipped={flipped} handlerOnClick={_onClick} />
       <CardFlipper direction={'right'} isFlipped={flipped} handlerOnClick={_onClick} />
       <CardFlipper direction={'top'} isFlipped={flipped} handlerOnClick={_onClick} />
-      <CardFlipper direction={'bottom'} isFlipped={flipped} handlerOnClick={_onClick} />
+      <CardFlipper direction={'down'} isFlipped={flipped} handlerOnClick={_onClick} />
     </div>
   );
 }
