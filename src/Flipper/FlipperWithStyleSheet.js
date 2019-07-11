@@ -1,29 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 import { animated } from "react-spring"
 
 import useSpringFlip from "./useSpringFlip"
-
-const Flip = styled.div`
-  perspective: 1000px;
-`
-const Wrapper = styled(animated.div)`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  will-change: transform, opacity;
-`
+import './index.scss'
 
 function FlipperTransition({ direction, hover, isFlipped, fontComponent, backComponent, ...props}) {
   const [fontWrapperStyle, backWrapperStyle] = useSpringFlip(isFlipped, direction)
 
   return (
-    <Flip {...props}>
-      <Wrapper style={fontWrapperStyle}>{fontComponent}</Wrapper>
-      <Wrapper style={backWrapperStyle}>{backComponent}</Wrapper>
-    </Flip>
+    <div className="flipper" {...props}>
+      <animated.div className="wrapper" style={fontWrapperStyle}>{fontComponent}</animated.div>
+      <animated.div className="wrapper" style={backWrapperStyle}>{backComponent}</animated.div>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Flipper, { FlipperTransition } from '../../Flipper'
+import Flipper, { FlipperTransition, FlipperWithStyleSheet } from '../../Flipper'
 
 const CardBoxShadow = `0 16px 24px 2px rgba(0, 0, 0, 0.14),
 0 6px 30px 5px rgba(0, 0, 0, 0.12),
@@ -67,7 +67,7 @@ function FlipGroup() {
         {
           directionList.map((direction, index) => {
             return (
-              <FlipperTransition
+              <FlipperWithStyleSheet
                 key={`spring-flip-${direction}-${index}`}
                 isFlipped={flipped}
                 direction={direction}

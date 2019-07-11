@@ -1,0 +1,11 @@
+.flipper {
+  perspective: 1000px;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+  }
+}
